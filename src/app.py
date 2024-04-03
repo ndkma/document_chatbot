@@ -19,7 +19,7 @@ text_splitter = create_text_splitter(200, 20)
 chunks = create_chunks(text_blob, text_splitter)
 collection = create_collection(chunks)
 
-# LLM uutput generation processing: utils.output_gen_funcs.py
+# LLM output generation processing: utils.output_gen_funcs.py
 user_input = "What are some of the different Linux distros"
 results = fetch_query_results(user_input, collection)
 prompt = create_llm_prompt(results, CONTEXT_PROMPT, user_input) 
