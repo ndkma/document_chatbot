@@ -3,8 +3,8 @@ from PyPDF2 import PdfReader
 import chromadb
 
 # Use reader to turn pdf into text
-def extract_text(doc_path : str) -> str:
-    reader = PdfReader(doc_path)
+def extract_text(pdf_upload: object) -> str:
+    reader = PdfReader(pdf_upload)
     nr_of_pages = len(reader.pages)
     text_string = ''
     for page in reader.pages:
